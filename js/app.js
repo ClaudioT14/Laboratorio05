@@ -148,7 +148,7 @@ function multiplyAnyArray(testDynamicArray) { //eslint-disable-line
     }
     return [producto5, msg5.substr(0, msg5.length - 1) + " have a product of " + producto5 + "."];
 }
-
+multiplyArray();
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
