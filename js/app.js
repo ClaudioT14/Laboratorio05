@@ -30,7 +30,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { 
+function multiply(a, b) {
     //eslint-disable-line
     const producto = a * b
     const mensaje = "The productof " + a + " and " + b + " is " + producto + "."
@@ -55,10 +55,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a, b, c) {
+    //eslint-disable-line       
+    const sum3 = sum(a, sum(b, c)[0])[0];
+    const producto3 = multiply(a, multiply(b, c)[0])[0];
+    const mensajeSum3 = a + " and " + b + " and " + c + " sum to " + sum3 + ".";
+    const mensajeProducto3 = "The product of " + a + " and " + b + " and " + c + " is " + producto3 + ".";
+    return [sum3, producto3, mensajeSum3, mensajeProducto3];
 }
 
+testSumAndMultiply();
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
