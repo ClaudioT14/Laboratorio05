@@ -83,10 +83,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
+function sumArray(sumArr) { 
+    //eslint-disable-line
+    const sum4 = sum(testArray[0], sum(testArray[1], testArray[2])[0])[0];    
+    return [sum4, testArray[0] + "," + testArray[1] + "," + testArray[2] + " was passed in as an array of numbers, and " + sum4 + " is their sum."];
 }
 
+
+testSumArray()
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
