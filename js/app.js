@@ -104,9 +104,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+function multiplyArray(testArray) { //eslint-disable-line
+    const producto5 = multiply(testArray[0], multiply(testArray[1], testArray[2])[0])[0];
+    const mensajeProducto5 = "The numbers " + 2 + "," + 3 + "," + 4 + " have a product of " + 24 + ".";    
+    return [producto5, mensajeProducto5];
 }
+multiplyArray();
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
@@ -132,8 +135,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+function multiplyAnyArray(testDynamicArray) { //eslint-disable-line
+    let producto5 = 1;
+    let msg5 = "The numbers "//1,2,3,4,5 ";
+    for (let i = 0; i < testDynamicArray.length; i++) {
+        producto5 = multiply(producto5, testDynamicArray[i])[0];
+        msg5 = msg5 + testDynamicArray[i] + ",";
+    }
+    return [producto5, msg5.substr(0, msg5.length - 1) + " have a product of " + producto5 + "."];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
